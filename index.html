@@ -1,12 +1,65 @@
-<!DOCTYPE html>
 <html>
-<head>
-</head>>
-<body>
-
-</body>
-
-
+  <head>
+    <title>The CSS position</title>
+    <style>
+      div {
+        border: 1px solid black;
+        width: 150px;
+        height: 100px;
+        overflow: hidden;
+      }
+      .static-pos {
+        background-color: rgba(255, 0, 0, 0.4);
+        position: static;
+      }
+      div.relative-pos {
+        background-color: rgba(255,255, 0, 0.5);
+        position: relative;
+        left: 50px;
+        bottom: 50px;
+        z-index: -1;
+      }
+      div.absolute-pos {
+        background-color: rgba(0, 255, 0, 0.5);
+        position: absolute;
+        right: 30px;
+        top: 15px;
+      }
+      .fixed-pos {
+        background-color: rgba(255, 0, 255, 0.3);
+        position: fixed;
+        right: 10px;
+        bottom: 5px;
+      }
+      .sticky-pos {
+        background-color: gold;
+        position: sticky;
+        left:50px;
+        top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The CSS position</h1>
+    <h2>Static</h2>
+    <div class='static-pos'>This is a static position. 這是一個DIV元件這是一個DIV元件這是一個DIV元件這是一個DIV元件這是一個DIV元件</div>
+    <h2>Relative</h2>
+    <div class='relative-pos'>This is a relative position. 這是一個DIV元件這是一個DIV元件這是一個DIV元件這是一個DIV元件這是一個DIV元件</div>
+    <h2>Absolute</h2>
+    <div class='absolute-pos'>This is a absolute position. 這是一個DIV元件這是一個DIV元件這是一個DIV元件這是一個DIV元件這是一個DIV元件</div>
+    <div style='position: relative; width: 80%; height: 150px;'>
+       <div class='absolute-pos'>This is a absolute position. 這是一個DIV元件這是一個DIV元件這是一個DIV元件這是一個DIV元件這是一個DIV元件</div>
+    </div>
+    <h2>Fixed</h2>
+    <div class='fixed-pos'>This is a static position. 這是一個DIV元件這是一個DIV元件這是一個DIV元件這是一個DIV元件這是一個DIV元件</div>
+    <div style='position:relative; width: 80%; height: 150px;'>
+      <div class='fixed-pos'>This is a static position. 這是一個DIV元件這是一個DIV元件這是一個DIV元件這是一個DIV元件這是一個DIV元件</div>
+    </div> 
+    <h2>Sticky</h2>
+    <div style='height: 200px; width: 80%; overflow: auto;'>
+      <p>ABCDEFG</p>
+      <div class='sticky-pos'>This is a static position. 這是一個DIV元件這是一個DIV元件這是一個DIV元件這是一個DIV元件這是一個DIV元件</div>
+      <br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+  </body>
 </html>
-
-<div id="app"></div>
